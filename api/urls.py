@@ -1,9 +1,11 @@
 from django.urls import path
-from .views import ProizvodLista, ProizvodOsobine, LokacijaOsobine, LokacijaLista
+from .views import Proizvod1,  LokacijaLista, ProizvodLista, Lokacija1
 
 urlpatterns = [
-    path('lokacija/', LokacijaLista.as_view()),
-    path('lokacija/<int:pk>/', LokacijaOsobine.as_view()),
-    path('proizvod/', ProizvodLista.as_view()),
-    path('proizvod/<int:pk>/', ProizvodOsobine.as_view()),
+    path('lokacije/', LokacijaLista.as_view()),
+    path('lokacija/<int:pk>/', Lokacija1.as_view()),
+    path('proizvodi/', ProizvodLista.as_view()),
+    path('proizvod/<int:pk>/', Proizvod1.as_view()),
+
+
 ]
